@@ -1,0 +1,16 @@
+Keystore "origen.jks";
+grant SignedBy "desti"{
+//Exercici 1
+	//permission java.security.AllPermission;
+	//permission java.io.FilePermission "C:/Test.txt", "read";
+//Exercici 2
+	//Damos permisos para leer las propertyes, el fichero y usar el FileSeparator
+	permission java.util.PropertyPermission "user.dir", "read";
+	permission java.io.FilePermission "names.txt", "read, write";
+	permission java.util.PropertyPermission "file.separator", "read";
+	//Damos permisos de Socket
+	permission java.net.SocketPermission "*:80", "connect, resolve";
+
+//Exercici 3
+	
+};
